@@ -8,12 +8,19 @@ function App() {
   const agregarItem = (item) => {
     setItems([...items, item]);
   };
+  const eliminarItem = (id) => {
+  const nuevaLista = items.filter((item) => item.id !== id);
+  setItems(nuevaLista);
+};
 
   return (
     <div className= "App">
       <h1>Lista de Compras</h1>
       <FormItem agregarItem={agregarItem} />
-      <ListaItems items={items} />
+      <ListaItems 
+      items={items}
+      eliminarItem={eliminarItem} 
+      />
     </div>
   );
 }

@@ -1,4 +1,6 @@
-function ListaItems({ items }) {
+import Item from "./Item";
+
+function ListaItems({ items, eliminarItem }) {
   return (
     <div>
       <h2>Lista</h2>
@@ -7,9 +9,11 @@ function ListaItems({ items }) {
         <p>No hay productos</p>
       ) : (
         items.map((item) => (
-          <div key={item.id}>
-            {item.nombre} - {item.cantidad}
-          </div>
+          <Item 
+            key={item.id} 
+            item={item} 
+            eliminarItem={eliminarItem} 
+          />
         ))
       )}
     </div>
