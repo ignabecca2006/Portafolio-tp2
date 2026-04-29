@@ -11,11 +11,15 @@ function App() {
   const eliminarItem = (id) => {
   const nuevaLista = items.filter((item) => item.id !== id);
   setItems(nuevaLista);
+
 };
 
   return (
     <div className= "App">
-      <h1>Lista de Compras</h1>
+      <div className="banner"> 
+        Supermercado  Pinguino 
+
+      </div>
       <FormItem agregarItem={agregarItem} />
       <ListaItems 
       items={items}

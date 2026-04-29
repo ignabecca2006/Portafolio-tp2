@@ -1,9 +1,11 @@
 function Item({ item, eliminarItem }) {
   return (
     <div style={{ marginTop: "10px" }}>
-      {item.nombre} - {item.cantidad}
+      {item.nombre} : {item.cantidad}
 
-      <button onClick={() => eliminarItem(item.id)}>
+      <button onClick={() => eliminarItem(item.id)}
+          style={{ marginLeft: "20px" }}
+          >
         Eliminar
       </button>
     </div>
